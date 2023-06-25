@@ -1,0 +1,13 @@
+@use 'parts/appear'; // appearアニメーション
+// @use 'parts/button'; // buttonアニメーション
+// @use 'parts/hero-slider'; // 画面トップスライダー
+// @use 'parts/text-animation'; // テキストアニメーション
+// @use 'parts/image-slide'; // 画像スライドアニメーション
+@use 'parts/loader'; // ローダー
+@use 'parts/mobile-menu'; // モバイルメニュー
+@use 'parts/image-animation'; //画像が移り変わるアニメーション
+@use 'parts/modal'; //モーダル用
+@use 'parts/tab'; //タブ用
+
+
+@use "pages/home"; // トップ画面スタイル（ページ毎に作成）

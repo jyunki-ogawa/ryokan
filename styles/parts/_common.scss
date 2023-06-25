@@ -1,0 +1,114 @@
+@use "../globals" as *;
+//globalsの中のcssが利用できるという意味
+
+
+body {
+  font-family: "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳＰ明朝", "MS PMincho", serif, "Noto Sans JP";
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.bg-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mb-sm {
+  margin-bottom: 16px !important;
+}
+
+.mb-lg {
+  margin-bottom: 80px !important;
+
+  @include mq(lg) {
+    margin-bottom: 150px !important;
+  }
+}
+
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+
+.pb-lg {
+  padding-bottom: 80px !important;
+
+  @include mq(lg) {
+    padding-bottom: 150px !important;
+  }
+}
+
+// 必要に応じてwidth: 90%をつける
+.content-width {
+  // width: 90%;
+  // width: 1180px;
+  // margin: 0 auto;
+  max-width: $contentMaxWidth;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+
+  @include mq(md) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.purple {
+  color: $cWineRed;
+}
+
+#main-content {
+  position: relative;
+  z-index: 0;
+}
+
+// font
+.font-sm {
+  font-size: 14px;
+
+  @include mq(lg) {
+    font-size: 16px;
+  }
+}
+
+.font-md {
+  font-size: 17px;
+
+  @include mq(lg) {
+    font-size: 19px;
+  }
+}
+
+.font-lr {
+  font-size: 17px;
+
+  @include mq(lg) {
+    font-size: 23px;
+  }
+}
+
+.font-lg {
+  font-size: 25px;
+
+  @include mq(lg) {
+    font-size: 36px;
+  }
+}
+
+.main-title {
+  @extend .font-lg;
+  font-weight: 600;
+  margin-bottom: 0;
+  display: block;
+}
+
+.sub-title {
+  @extend .font-sm;
+  color: $cSubTitle;
+}

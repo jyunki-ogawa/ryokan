@@ -1,0 +1,64 @@
+@use "../globals" as *;
+
+
+.change {
+    position: relative;
+    width: 100%;
+    height: 769px;
+    overflow: hidden;
+}
+
+.change__image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    @include animation(
+        $name: change-1,
+        $duration: 24s,
+        $timing-function: linear,
+        $iteration-count: infinite,
+        // $fill-mode: none
+      );
+
+    &:nth-child(1) {
+        background-image: url(../images/mainbg01.jpg);
+        animation-delay: -2s;
+    }
+    &:nth-child(2) {
+        background-image: url(../images/mainbg02.jpg);
+        animation-delay: 6s;
+    }
+    &:nth-child(3) {
+        background-image: url(../images/mainbg03.jpg);
+        animation-delay: 14s;
+    }
+}
+
+@keyframes change-1 {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    //一秒
+    4.16% {
+        opacity: 1;
+    }
+    // 8秒
+    33.33% {
+        opacity: 1;
+    }
+    // 10秒で消す
+    41.66% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 0;
+    }
+}
